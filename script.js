@@ -11,11 +11,3 @@ function showToast(message) {
   window.clearTimeout(showToast.timeout);
   showToast.timeout = window.setTimeout(() => toast.classList.remove('show'), 2600);
 }
-
-function updateClock() {
-  const now = new Date();
-  document.querySelector('#clock').textContent = now.toLocaleTimeString([], { hour12: false });
-}
-
-updateClock();
-window.setInterval(updateClock, 1000);
